@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07F54BD51E52F02E00845EAA /* PywWebCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F54BD41E52F02E00845EAA /* PywWebCacheManager.m */; };
 		C800AAE8166E77B20027E1E5 /* NSString+Sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = C800AAE7166E77B20027E1E5 /* NSString+Sha1.m */; };
 		FB237ECE14D5B86100F30AD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB237ECD14D5B86100F30AD8 /* UIKit.framework */; };
 		FB237ED014D5B86100F30AD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB237ECF14D5B86100F30AD8 /* Foundation.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07F54BD31E52F02E00845EAA /* PywWebCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PywWebCacheManager.h; sourceTree = "<group>"; };
+		07F54BD41E52F02E00845EAA /* PywWebCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PywWebCacheManager.m; sourceTree = "<group>"; };
 		C800AAE6166E77B20027E1E5 /* NSString+Sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sha1.h"; sourceTree = "<group>"; };
 		C800AAE7166E77B20027E1E5 /* NSString+Sha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sha1.m"; sourceTree = "<group>"; };
 		FB237EC914D5B86100F30AD8 /* CachedWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachedWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +72,8 @@
 				FB39D08214D5BB1F002A6D1A /* README.md */,
 				FB237EEA14D5B87400F30AD8 /* RNCachingURLProtocol.h */,
 				FB237EEB14D5B87400F30AD8 /* RNCachingURLProtocol.m */,
+				07F54BD31E52F02E00845EAA /* PywWebCacheManager.h */,
+				07F54BD41E52F02E00845EAA /* PywWebCacheManager.m */,
 				FB237EEC14D5B89700F30AD8 /* Reachability.m */,
 				FB237EED14D5B89700F30AD8 /* Reachability.h */,
 				FB237ED314D5B86100F30AD8 /* CachedWebView */,
@@ -147,6 +152,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					FB237EC814D5B86100F30AD8 = {
+						DevelopmentTeam = 293VM2BUQ6;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = FB237EC314D5B86100F30AD8 /* Build configuration list for PBXProject "CachedWebView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -189,6 +200,7 @@
 				FB237EDE14D5B86100F30AD8 /* AppDelegate.m in Sources */,
 				FB237EE114D5B86100F30AD8 /* ViewController.m in Sources */,
 				C800AAE8166E77B20027E1E5 /* NSString+Sha1.m in Sources */,
+				07F54BD51E52F02E00845EAA /* PywWebCacheManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,10 +276,15 @@
 		FB237EE814D5B86100F30AD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 293VM2BUQ6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CachedWebView/CachedWebView-Prefix.pch";
 				INFOPLIST_FILE = "CachedWebView/CachedWebView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c297115c-bd7e-4110-bca0-100816b16b27";
+				PROVISIONING_PROFILE_SPECIFIER = CodeResignDevelopment;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,10 +292,13 @@
 		FB237EE914D5B86100F30AD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CachedWebView/CachedWebView-Prefix.pch";
 				INFOPLIST_FILE = "CachedWebView/CachedWebView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

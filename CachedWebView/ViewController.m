@@ -27,6 +27,7 @@
 //
 
 #import "ViewController.h"
+#import "PywWebCacheManager.h"
 
 @interface ViewController ()
 
@@ -37,8 +38,9 @@
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
-  [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://cnn.com"]]];
+    [super viewDidLoad];
+    [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://cnn.com"]]];
+    [PywWebCacheManager clearAllWebCache];
 }
 
 @end

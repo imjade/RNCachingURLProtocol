@@ -29,7 +29,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
-#import "RNCachingURLProtocol.h"
+#import "PywWebCacheManager.h"
 
 @implementation AppDelegate
 
@@ -38,7 +38,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
+  [NSURLProtocol registerClass:[PywWebCacheManager class]];
 
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
